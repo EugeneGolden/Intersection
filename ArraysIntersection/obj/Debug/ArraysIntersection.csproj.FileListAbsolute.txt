@@ -1,0 +1,6 @@
+c:\users\admin\documents\visual studio 2015\Projects\ArraysIntersection\ArraysIntersection\bin\Debug\ArraysIntersection.exe.config
+c:\users\admin\documents\visual studio 2015\Projects\ArraysIntersection\ArraysIntersection\bin\Debug\ArraysIntersection.exe
+c:\users\admin\documents\visual studio 2015\Projects\ArraysIntersection\ArraysIntersection\bin\Debug\ArraysIntersection.pdb
+c:\users\admin\documents\visual studio 2015\Projects\ArraysIntersection\ArraysIntersection\obj\Debug\ArraysIntersection.csprojResolveAssemblyReference.cache
+c:\users\admin\documents\visual studio 2015\Projects\ArraysIntersection\ArraysIntersection\obj\Debug\ArraysIntersection.exe
+c:\users\admin\documents\visual studio 2015\Projects\ArraysIntersection\ArraysIntersection\obj\Debug\ArraysIntersection.pdb
