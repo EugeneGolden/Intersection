@@ -31,50 +31,50 @@ namespace ArraysIntersection
 
             for (int i = 0; i < array1.Length; i++)           //look through elements of the first array1
             {
-                if (intersectionList.Contains(array1[i]))    //check whether the list, which shows intersection, has such kind of an element or not
+                if (intersectionList.Contains(array1[i]))     //check whether the list, which shows intersection, has such kind of an element or not
                 {
                     continue;
                 }
                 else
                 {
-                    for (int j = 0; j < array2.Length; j++)  //look through elements of the second array2
+                    for (int j = 0; j < array2.Length; j++)           //look through elements of the second array2
                     {
-                        if (intersectionList.Contains(array2[j]))    //check whether the list, which shows intersection, has such kind of an element or not
+                        if (intersectionList.Contains(array2[j]))     //check whether the list, which shows intersection, has such kind of an element or not
                         {
                             continue;
                         }
-                        else if (array1[i] == array2[j])          //if the first and the second arrays have the same element than let's count how many such elements they have in each array
+                        else if (array1[i] == array2[j])              //if the first and the second arrays have the same element than let's count how many such elements they have in each array
                         {
-                            for (int k = 0; k < array1.Length; k++) //looking for amount of array1[i] in the FIRST array (array1)
+                            for (int k = 0; k < array1.Length; k++)   //looking for amount of array1[i] in the FIRST array (array1)
                             {
-                                if (array1[k] == array1[j])
+                                if (array1[k] == array1[i])
                                 {
                                     list1.Add(array1[k]);
                                 }
                             }
-                            lengthInsideArray1 = list1.Count;  //it shows how many array1[i] are inside array1
-                            list1.Clear();
+                            lengthInsideArray1 = list1.Count;         //it shows how many array1[i] are inside array1
+                            list1.Clear();                            //we need to have the list clear for the next calculation
 
-                            for (int l = 0; l < array2.Length; l++) ////looking for amount of array[i] in the SECOND array (array2)
+                            for (int l = 0; l < array2.Length; l++)   //looking for amount of array[i] in the SECOND array (array2)
                             {
-                                if (array2[l] == array1[j])
+                                if (array2[l] == array1[i])
                                 {
                                     list2.Add(array2[l]);
                                 }
                             }
-                            lengthInsideArray2 = list2.Count;  //it shows how many array1[i] are inside array2
-                            list2.Clear();
+                            lengthInsideArray2 = list2.Count;         //it shows how many array1[i] are inside array2
+                            list2.Clear();                            //we need to have the list clear for the next calculation
 
                             if (lengthInsideArray1 <= lengthInsideArray2) //we need to understand which amount is less
                             {
-                                for (int m = 0; m < lengthInsideArray1; m++) //Then we'll add array1[i] element
+                                for (int m = 0; m < lengthInsideArray1; m++) //then we'll add array1[i] element
                                 {
                                     intersectionList.Add(array1[i]);
                                 }
                             }
                             else
                             {
-                                for (int m = 0; m < lengthInsideArray2; m++) //Then we'll add array1[i] element 
+                                for (int m = 0; m < lengthInsideArray2; m++) //then we'll add array1[i] element 
                                 {
                                     intersectionList.Add(array1[i]);
                                 }
