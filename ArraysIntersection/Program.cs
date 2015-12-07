@@ -19,7 +19,7 @@ namespace ArraysIntersection
             string array2;                                      //the string will be used as the second array
             int lengthInsideArray1;
             int lengthInsideArray2;
-            ArrayList intersectionList = new ArrayList();      //will be used to show intersection
+            ArrayList intersectionList = new ArrayList();       //will be used to show intersection
             ArrayList list1 = new ArrayList();                  //will be used to know how many the same particular elements are inside the first array
             ArrayList list2 = new ArrayList();                  //will be used to know how many the same particular elements are inside the second array
 
@@ -39,25 +39,31 @@ namespace ArraysIntersection
                 {
                     for (int j = 0; j < array2.Length; j++)  //look through elements of the second array2
                     {
-                        if (array1[i] == array2[j])          //if the first and the second arrays have the same element than let's count how many such elements they have in each array
+                        if (intersectionList.Contains(array2[j]))    //check whether the list, which shows intersection, has such kind of an element or not
+                        {
+                            continue;
+                        }
+                        else if (array1[i] == array2[j])          //if the first and the second arrays have the same element than let's count how many such elements they have in each array
                         {
                             for (int k = 0; k < array1.Length; k++) //looking for amount of array1[i] in the FIRST array (array1)
                             {
-                                if (array1[k] == array1[i])
+                                if (array1[k] == array1[j])
                                 {
                                     list1.Add(array1[k]);
                                 }
                             }
                             lengthInsideArray1 = list1.Count;  //it shows how many array1[i] are inside array1
+                            list1.Clear();
 
                             for (int l = 0; l < array2.Length; l++) ////looking for amount of array[i] in the SECOND array (array2)
                             {
-                                if (array2[l] == array1[i])
+                                if (array2[l] == array1[j])
                                 {
                                     list2.Add(array2[l]);
                                 }
                             }
                             lengthInsideArray2 = list2.Count;  //it shows how many array1[i] are inside array2
+                            list2.Clear();
 
                             if (lengthInsideArray1 <= lengthInsideArray2) //we need to understand which amount is less
                             {
